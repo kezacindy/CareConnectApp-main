@@ -1,0 +1,37 @@
+.app-container {
+  display: flex;
+  flex-direction: row; /* Ensure sidebar and main content are side by side */
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+  padding: 1rem; /* Add padding to main content */
+}
+
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 20px;
+}
+
+.card {
+  background-color: var(--surface-color);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  padding: 20px;
+  margin: 10px;
+  flex: 1 1 calc(30% - 20px); /* Adjust width and spacing */
+  text-align: center;
+}
+
+.card h3 {
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 1.5em;
+  color: var(--text-color);
+}

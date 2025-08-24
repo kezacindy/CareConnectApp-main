@@ -1,0 +1,154 @@
+.globalSearch {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.searchBar {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  width: 100%;
+  transition: all 0.2s ease;
+}
+
+.searchBar:focus-within {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.1);
+}
+
+.searchIcon {
+  color: #64748b;
+  margin-right: 0.75rem;
+}
+
+.searchInput {
+  border: none;
+  outline: none;
+  width: 100%;
+  font-size: 0.875rem;
+  color: #1e293b;
+}
+
+.searchResults {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  margin-top: 0.5rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  max-height: 400px;
+  overflow-y: auto;
+  z-index: 50;
+}
+
+.searchResult {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.searchResult:hover {
+  background-color: #f8fafc;
+}
+
+.searchResult:not(:last-child) {
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.resultIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: #f1f5f9;
+  border-radius: 8px;
+  margin-right: 1rem;
+}
+
+.resultInfo {
+  flex: 1;
+}
+
+.resultName {
+  font-weight: 500;
+  color: #1e293b;
+  margin-bottom: 0.25rem;
+}
+
+.resultType {
+  font-size: 0.75rem;
+  color: #64748b;
+}
+
+.resultDetails {
+  font-size: 0.875rem;
+  color: #64748b;
+  margin-top: 0.25rem;
+}
+
+.searchLoading {
+  text-align: center;
+  padding: 1rem;
+  color: #64748b;
+}
+
+.spinner {
+  width: 1.5rem;
+  height: 1.5rem;
+  border: 2px solid #f3f3f3;
+  border-top: 2px solid #3b82f6;
+  border-radius: 50%;
+  margin: 0 auto 0.5rem;
+  animation: spin 1s linear infinite;
+}
+
+.searchError {
+  text-align: center;
+  padding: 1rem;
+  color: #dc2626;
+  background-color: #fee2e2;
+  border-radius: 8px;
+  margin-top: 0.5rem;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+} 
+
+.noResults {
+  padding: 2rem;
+  text-align: center;
+  color: #64748b;
+}
+
+.noResultsIcon {
+  font-size: 2rem;
+  color: #94a3b8;
+  margin-bottom: 1rem;
+  opacity: 0.5;
+}
+
+.noResults p {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #475569;
+  margin-bottom: 0.5rem;
+}
+
+.noResults span {
+  font-size: 0.875rem;
+  color: #94a3b8;
+}
+  

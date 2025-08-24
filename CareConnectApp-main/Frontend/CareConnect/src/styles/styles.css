@@ -1,0 +1,100 @@
+
+  
+  .dashboard-link {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+  
+  .dashboard-link:hover {
+    background-color: #0056b3;
+  }
+  
+  .home-footer {
+    margin-top: 40px;
+    text-align: center;
+  }
+  
+  .home-footer .nav-link {
+    margin: 0 10px;
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .home-footer .nav-link:hover {
+    text-decoration: underline;
+  }
+  
+.doctor-dashboard {
+    padding: 20px;
+    background-color: #f7f9fc;
+    font-family: Arial, sans-serif;
+  }
+  
+  .dashboard-header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .dashboard-header h1 {
+    color: #007bff;
+  }
+  
+  .appointment-list table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+  }
+  
+  .appointment-list th, .appointment-list td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+  }
+  
+  .appointment-list th {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .patient-records ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .patient-records li {
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    background-color: #fff;
+  }
+  .doctor-card {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .doctor-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .doctors-list h2 {
+    color: #007bff;
+    font-size: 2rem;
+  }
+  
+  footer nav a {
+    font-size: 1rem;
+    font-weight: 500;
+  }
+  
+  footer nav a:hover {
+    text-decoration: underline;
+  }
+  

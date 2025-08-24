@@ -1,0 +1,332 @@
+.container {
+  padding: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #e2e8f0;
+}
+
+.header h2 {
+  color: #1e293b;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.header p {
+  color: #64748b;
+  font-size: 1.1rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.formGroup label {
+  color: #475569;
+  font-weight: 500;
+}
+
+.formGroup input,
+.formGroup textarea {
+  padding: 0.75rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+}
+
+.formGroup textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.formGroup input:focus,
+.formGroup textarea:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.submitButton {
+  padding: 0.75rem 1.5rem;
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  margin-top: 1rem;
+}
+
+.submitButton:hover {
+  background-color: #1d4ed8;
+}
+
+.medical-records-table table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background: white;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.medical-records-table th,
+.medical-records-table td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+.medical-records-table th {
+  background-color: #f8f9fa;
+  font-weight: 600;
+  color: #495057;
+}
+
+.medical-records-table tr:hover {
+  background-color: #f8f9fa;
+}
+
+.medical-records-table td[colspan="5"] {
+  color: #6c757d;
+  font-style: italic;
+}
+
+/* Add some responsive styles */
+@media (max-width: 768px) {
+  .medical-records-table {
+    overflow-x: auto;
+  }
+  
+  .medical-records-table table {
+    min-width: 800px;
+  }
+}
+
+.appointmentSection {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  margin-top: 2rem;
+}
+
+.sectionHeader {
+  padding: 1.5rem;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.sectionHeader h2 {
+  color: #1a202c;
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.tableContainer {
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table th {
+  background-color: #f8fafc;
+  color: #64748b;
+  font-weight: 600;
+  text-align: left;
+  padding: 1rem;
+  font-size: 0.875rem;
+}
+
+.table td {
+  padding: 1rem;
+  border-bottom: 1px solid #e2e8f0;
+  color: #1e293b;
+}
+
+.dateCell {
+  display: flex;
+  flex-direction: column;
+}
+
+.date {
+  color: #1e293b;
+  font-weight: 500;
+}
+
+.time {
+  color: #64748b;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}
+
+.patientCell {
+  display: flex;
+  flex-direction: column;
+}
+
+.patientName {
+  color: #1e293b;
+  font-weight: 500;
+}
+
+.patientEmail {
+  color: #64748b;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}
+
+.diagnosisType {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.general {
+  background-color: #e0f2fe;
+  color: #0369a1;
+}
+
+.chronic {
+  background-color: #fef3c7;
+  color: #b45309;
+}
+
+.acute {
+  background-color: #fee2e2;
+  color: #b91c1c;
+}
+
+.preventive {
+  background-color: #dcfce7;
+  color: #15803d;
+}
+
+.prescriptionCell {
+  max-width: 200px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.notesCell {
+  max-width: 200px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.status {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.completed {
+  background-color: #dcfce7;
+  color: #15803d;
+}
+
+.noData {
+  text-align: center;
+}
+
+.noDataContent {
+  padding: 3rem;
+  color: #64748b;
+  font-style: italic;
+}
+
+@media (max-width: 768px) {
+  .table {
+    min-width: 1000px;
+  }
+}
+
+.doctor-info {
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.doctor-info h3 {
+  font-size: 1.25rem;
+  color: #003087;
+  margin-bottom: 0.5rem;
+}
+
+.doctor-info p {
+  color: #64748b;
+  font-size: 0.875rem;
+}
+
+.form-section-title {
+  font-size: 1.25rem;
+  color: #374151;
+  margin-bottom: 1.5rem;
+}
+
+.medical-record-form {
+  max-width: 800px;
+  margin-bottom: 2rem;
+}
+
+.medical-record-form .form-group {
+  margin-bottom: 1.5rem;
+}
+
+.medical-record-form label {
+  display: block;
+  font-weight: 500;
+  color: #374151;
+  margin-bottom: 0.5rem;
+}
+
+.medical-record-form .form-control {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.375rem;
+  background-color: white;
+}
+
+.medical-record-form .form-control:focus {
+  border-color: #003087;
+  box-shadow: 0 0 0 3px rgba(0, 48, 135, 0.1);
+  outline: none;
+}
+
+.medical-record-form textarea.form-control {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.records-history-section {
+  margin-top: 3rem;
+}
+
+.records-history-section .section-title {
+  margin-bottom: 1.5rem;
+}

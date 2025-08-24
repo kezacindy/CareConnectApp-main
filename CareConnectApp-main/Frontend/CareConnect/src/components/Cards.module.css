@@ -1,0 +1,49 @@
+.card {
+  background-color: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+}
+
+.cardTitle {
+  color: #64748b;
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.5rem;
+}
+
+.cardValue {
+  color: #1e293b;
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+/* Card color variants */
+.totalCard {
+  background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+}
+
+.completedCard {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+}
+
+.pendingCard {
+  background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+}
+
+.totalCard .cardTitle,
+.totalCard .cardValue,
+.completedCard .cardTitle,
+.completedCard .cardValue,
+.pendingCard .cardTitle,
+.pendingCard .cardValue {
+  color: white;
+} 

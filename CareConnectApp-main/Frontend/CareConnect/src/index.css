@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+  /* Updated Color Palette - Green Theme */
+  --primary-color: #10b981;        /* Emerald Green */
+  --primary-color-light: #34d399;  /* Light Emerald */
+  --primary-color-dark: #059669;   /* Darker Emerald */
+  
+  --success-color: #22c55e;        /* Bright Green */
+  --warning-color: #f59e0b;        /* Warm Amber */
+  --danger-color: #ef4444;         /* Rich Red */
+  
+  --background-color: #f0fdf4;     /* Light Green Background */
+  --surface-color: #ffffff;        /* Pure White */
+  
+  --text-color: #1f2937;           /* Dark Gray */
+  --text-color-light: #6b7280;     /* Soft Gray */
+  --text-color-muted: #9ca3af;     /* Muted Gray */
+  
+  --border-color: #d1fae5;         /* Light Green Border */
+  --shadow-color: rgba(16, 185, 129, 0.1);  /* Green-tinted Shadow */
+  
+  --shadow-sm: 0 2px 4px var(--shadow-color);
+  --shadow-md: 0 4px 6px var(--shadow-color);
+  --shadow-lg: 0 10px 15px var(--shadow-color);
+  
+  /* Gradients */
+  --gradient-primary: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-color-dark) 100%);
+  --gradient-surface: linear-gradient(135deg, var(--surface-color) 0%, var(--surface-color-alt) 100%);
+  
+  /* Typography */
+  --font-primary: 'Inter', sans-serif;
+  --font-secondary: 'Poppins', sans-serif;
+  
+  /* Border Radius */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 20px;
+  
+  /* Transitions */
+  --transition-fast: 150ms ease;
+  --transition-normal: 300ms ease;
+  --transition-slow: 500ms ease;
+}
+
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-primary);
+  line-height: 1.6;
+  color: var(--text-color);
+  background-color: var(--background-color);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Buttons */
+.btn {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+  background-color: var(--primary-color-light);
+  transform: scale(1.05);
+}
+
+/* Hero Section */
+.hero {
+  background-image: url('path/to/hero-image.jpg');
+  background-size: cover;
+  min-height: 85vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Loading Spinner */
+.spinner {
+  border: 4px solid rgba(16, 185, 129, 0.3);
+  border-top: 4px solid #10b981;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Full Page Transition */
+.fade {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+.fade-enter-active, .fade-exit-active {
+  opacity: 1;
+}
+
+/* Parallax Scrolling */
+.parallax {
+  background-image: url('path/to/background-image.jpg');
+  height: 500px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Content Styles */
+.content {
+  background-color: var(--primary-color); /* Use a contrasting background color */
+  color: white; /* Ensure text is white for visibility */
+  padding: 20px; /* Add some padding */
+  border-radius: 8px; /* Optional: add rounded corners */
+}
+
+h1.display-4 {
+  color: var(--primary-color-dark); /* Use a darker color for the heading */
+}
+
+p.lead {
+  color: var(--text-color-light); /* Use a softer gray for the paragraph */
+}

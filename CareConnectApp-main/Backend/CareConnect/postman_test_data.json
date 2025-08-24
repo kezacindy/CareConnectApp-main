@@ -1,0 +1,213 @@
+{
+    "Patient": {
+        "POST - Create Patient": {
+            "endpoint": "POST http://localhost:8080/api/patients",
+            "body": {
+                "name": "John Doe",
+                "email": "john.doe@email.com",
+                "phone": "+250789123456",
+                "dateOfBirth": "1990-05-15",
+                "gender": "MALE",
+                "address": "KN 5 Rd, Kigali"
+            }
+        },
+        "GET - Find Patient by Email": {
+            "endpoint": "GET http://localhost:8080/api/patients/email/john.doe@email.com",
+            "description": "Retrieves patient details using email"
+        },
+        "PUT - Update Patient": {
+            "endpoint": "PUT http://localhost:8080/api/patients/{id}",
+            "body": {
+                "name": "John Doe Updated",
+                "email": "john.updated@email.com",
+                "phone": "+250789123457",
+                "dateOfBirth": "1990-05-15",
+                "gender": "MALE",
+                "address": "KN 6 Rd, Kigali"
+            }
+        }
+    },
+    "Doctor": {
+        "POST - Create Doctor": {
+            "endpoint": "POST http://localhost:8080/api/doctors",
+            "body": {
+                "name": "Dr. Jane Smith",
+                "email": "dr.jane@hospital.com",
+                "phone": "+250789123458",
+                "specialization": "Cardiologist",
+                "licenseNumber": "MED123456",
+                "availability": true
+            }
+        },
+        "GET - Find Doctor by Email": {
+            "endpoint": "GET http://localhost:8080/api/doctors/email/dr.jane@hospital.com",
+            "description": "Retrieves doctor details using email"
+        },
+        "GET - Find Doctor by License": {
+            "endpoint": "GET http://localhost:8080/api/doctors/license/MED123456",
+            "description": "Retrieves doctor details using license number"
+        },
+        "PUT - Update Doctor": {
+            "endpoint": "PUT http://localhost:8080/api/doctors/{id}",
+            "body": {
+                "name": "Dr. Jane Smith",
+                "email": "dr.jane.updated@hospital.com",
+                "phone": "+250789123459",
+                "specialization": "Senior Cardiologist",
+                "licenseNumber": "MED123456",
+                "availability": true
+            }
+        }
+    },
+    "Search": {
+        "GET - Global Search": {
+            "endpoint": "GET http://localhost:8080/api/search?query=john",
+            "description": "Searches across all entities",
+            "example_queries": {
+                "by_name": "http://localhost:8080/api/search?query=john",
+                "by_email": "http://localhost:8080/api/search?query=@email.com",
+                "by_phone": "http://localhost:8080/api/search?query=+250789",
+                "by_specialization": "http://localhost:8080/api/search?query=cardio",
+                "by_condition": "http://localhost:8080/api/search?query=hypertension",
+                "by_treatment": "http://localhost:8080/api/search?query=inhibitors"
+            }
+        },
+        "GET - Patient Search": {
+            "endpoint": "GET http://localhost:8080/api/search/patients?query=john",
+            "description": "Searches only patients",
+            "example_queries": {
+                "by_name": "http://localhost:8080/api/search/patients?query=john",
+                "by_email": "http://localhost:8080/api/search/patients?query=@email.com",
+                "by_phone": "http://localhost:8080/api/search/patients?query=+250789"
+            }
+        },
+        "GET - Doctor Search": {
+            "endpoint": "GET http://localhost:8080/api/search/doctors?query=jane",
+            "description": "Searches only doctors",
+            "example_queries": {
+                "by_name": "http://localhost:8080/api/search/doctors?query=jane",
+                "by_email": "http://localhost:8080/api/search/doctors?query=@hospital.com",
+                "by_specialization": "http://localhost:8080/api/search/doctors?query=cardio"
+            }
+        },
+        "GET - Medical Records Search": {
+            "endpoint": "GET http://localhost:8080/api/search/medical-records?query=hypertension",
+            "description": "Searches only medical records",
+            "example_queries": {
+                "by_condition": "http://localhost:8080/api/search/medical-records?query=hypertension",
+                "by_treatment": "http://localhost:8080/api/search/medical-records?query=inhibitors",
+                "by_notes": "http://localhost:8080/api/search/medical-records?query=blood pressure"
+            }
+        }
+    },
+    "Testing Steps": {
+        "1": "First create a Patient using the Patient POST endpoint",
+        "2": "Then create a Doctor using the Doctor POST endpoint",
+        "3": "Test email lookups using the GET by email endpoints",
+        "4": "Try different search queries using the Search endpoints",
+        "5": "Use the returned IDs to create related entities",
+        "Notes": {
+            "Search Tips": [
+                "Search is case-insensitive",
+                "Partial matches are supported",
+                "Can search across multiple fields",
+                "Global search returns results from all entity types"
+            ],
+            "Email Lookup": [
+                "Email lookups are exact matches",
+                "Returns 404 if email not found",
+                "Available for both patients and doctors"
+            ]
+        }
+    },
+    "Appointment": {
+        "POST - Create Appointment": {
+            "endpoint": "POST http://localhost:8080/api/appointments",
+            "body": {
+                "appointmentDate": "2023-08-20T10:30:00",
+                "status": "SCHEDULED",
+                "notes": "Regular checkup",
+                "patient": {
+                    "id": "{patientId}"
+                },
+                "doctor": {
+                    "id": "{doctorId}"
+                }
+            }
+        },
+        "PUT - Update Appointment": {
+            "endpoint": "PUT http://localhost:8080/api/appointments/{id}",
+            "body": {
+                "appointmentDate": "2023-08-20T11:30:00",
+                "status": "RESCHEDULED",
+                "notes": "Rescheduled due to doctor availability",
+                "patient": {
+                    "id": "{patientId}"
+                },
+                "doctor": {
+                    "id": "{doctorId}"
+                }
+            }
+        }
+    },
+    "MedicalRecord": {
+        "POST - Create Medical Record": {
+            "endpoint": "POST http://localhost:8080/api/medical-records",
+            "body": {
+                "condition": "Hypertension",
+                "treatment": "Prescribed ACE inhibitors",
+                "notes": "Blood pressure slightly elevated",
+                "recordDate": "2023-08-20",
+                "patient": {
+                    "id": "{patientId}"
+                },
+                "doctor": {
+                    "id": "{doctorId}"
+                }
+            }
+        },
+        "PUT - Update Medical Record": {
+            "endpoint": "PUT http://localhost:8080/api/medical-records/{id}",
+            "body": {
+                "condition": "Hypertension - Stage 1",
+                "treatment": "Increased ACE inhibitors dosage",
+                "notes": "Blood pressure still elevated, monitoring required",
+                "recordDate": "2023-08-20",
+                "patient": {
+                    "id": "{patientId}"
+                },
+                "doctor": {
+                    "id": "{doctorId}"
+                }
+            }
+        }
+    },
+    "TestResult": {
+        "POST - Create Test Result": {
+            "endpoint": "POST http://localhost:8080/api/test-results",
+            "body": {
+                "testName": "Blood Pressure Test",
+                "result": "140/90",
+                "status": "COMPLETED",
+                "notes": "Slightly elevated",
+                "testDate": "2023-08-20",
+                "patient": {
+                    "id": "{patientId}"
+                }
+            }
+        },
+        "PUT - Update Test Result": {
+            "endpoint": "PUT http://localhost:8080/api/test-results/{id}",
+            "body": {
+                "testName": "Blood Pressure Test",
+                "result": "135/85",
+                "status": "COMPLETED",
+                "notes": "Improved after medication",
+                "testDate": "2023-08-20",
+                "patient": {
+                    "id": "{patientId}"
+                }
+            }
+        }
+    }
+}

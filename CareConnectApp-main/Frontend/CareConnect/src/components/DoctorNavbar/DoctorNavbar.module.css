@@ -1,0 +1,109 @@
+.navbar {
+  width: 280px;
+  height: 100vh;
+  background: white;
+  border-right: 1px solid rgba(0, 48, 135, 0.1);
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+.logo {
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  border-bottom: 1px solid rgba(0, 48, 135, 0.1);
+  color: #003087;
+}
+
+.logo svg {
+  font-size: 1.5rem;
+}
+
+.logo span {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.navLinks {
+  padding: 1.5rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.navLink {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  border: none;
+  background: none;
+  color: #64748b;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.9375rem;
+  width: 100%;
+  text-align: left;
+}
+
+.navLink:hover {
+  background: rgba(0, 48, 135, 0.05);
+  color: #003087;
+}
+
+.navLink.active {
+  background: rgba(0, 48, 135, 0.1);
+  color: #003087;
+  font-weight: 600;
+}
+
+.navLink svg {
+  font-size: 1.25rem;
+}
+
+.doctorInfo {
+  margin-top: auto;
+  padding: 1.5rem;
+  border-top: 1px solid rgba(0, 48, 135, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.doctorName {
+  font-weight: 600;
+  color: #003087;
+}
+
+.specialization {
+  font-size: 0.875rem;
+  color: #64748b;
+}
+
+.logoutButton {
+  margin: 1rem;
+  padding: 1rem;
+  border: none;
+  border-radius: 10px;
+  background: #fee2e2;
+  color: #dc2626;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.logoutButton:hover {
+  background: #fecaca;
+  transform: translateY(-2px);
+} 

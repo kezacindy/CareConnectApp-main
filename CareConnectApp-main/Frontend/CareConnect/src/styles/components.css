@@ -1,0 +1,65 @@
+.navbar {
+  background: rgba(255, 255, 255, 0.95);
+  color: var(--text-color);
+  backdrop-filter: blur(10px);
+  box-shadow: var(--shadow-sm);
+  position: relative;
+  top: 0;
+  z-index: 1000;
+  padding: 1rem 2rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.hero {
+  position: relative;
+  min-height: 85vh;
+  background: linear-gradient(135deg, var(--background-color) 0%, var(--surface-color) 100%);
+  padding: 6rem 2rem;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.hero-title {
+  font-size: 4rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: var(--text-color);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.card {
+  background: var(--surface-color);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+}
+
+.sidebar {
+  z-index: 2000;
+}
+
+.content {
+  background-color: var(--primary-color); /* Use a contrasting background color */
+  color: white; /* Ensure text is white for visibility */
+  padding: 20px; /* Add some padding */
+  border-radius: 8px; /* Optional: add rounded corners */
+}
+
+h1.display-4 {
+  color: var(--primary-color-dark); /* Use a darker color for the heading */
+}
+
+p.lead {
+  color: var(--text-color-light); /* Use a softer gray for the paragraph */
+}

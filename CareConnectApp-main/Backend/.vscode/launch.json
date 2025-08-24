@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-TelemedApplication<Telemed>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "TelemedApp.ac.rw.Telemed.TelemedApplication",
+            "projectName": "Telemed",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}

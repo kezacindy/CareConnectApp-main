@@ -1,0 +1,14 @@
+1.see all remote branches on repo
+-- git branch -r
+2.switch to one of the remote branch on the lcal machine
+
+--git checkout -b <nameofthebranch> origin/<nameofthebranch>
+
+3.Check if you are on the right branch
+--git branch
+4. add and commit the changes
+--git add .
+--git commit -m "Your commit message"
+5.push the changes to your own remote 
+--git push
+

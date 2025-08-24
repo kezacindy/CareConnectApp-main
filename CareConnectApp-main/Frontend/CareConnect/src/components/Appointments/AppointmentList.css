@@ -1,0 +1,338 @@
+.appointments-pages-container {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+}
+
+/* Heading Styles */
+.appointments-pages-container h2 {
+    color: #2c3e50;
+    font-size: 28px;
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #f0f2f5;
+}
+
+.appointments-pages-container h3 {
+    color: #34495e;
+    font-size: 20px;
+    margin-bottom: 25px;
+}
+
+/* Form Styles */
+.appointment-form {
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 8px;
+    border: 1px solid #e1e8ed;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #003087;
+    font-weight: 500;
+}
+
+.form-group select,
+.form-group input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 2px solid #e5e7eb;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.form-group select:focus,
+.form-group input:focus {
+    outline: none;
+    border-color: #003087;
+    box-shadow: 0 0 0 3px rgba(0, 48, 135, 0.1);
+}
+
+/* Book Appointment Button - Updated styles */
+.appointments-pages-container button {
+    background-color: #2ecc71;  /* Changed to green */
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+    width: 200px;  /* Fixed width for better appearance */
+    text-transform: uppercase;  /* Makes text all caps */
+    letter-spacing: 0.5px;  /* Spacing between letters */
+}
+
+.appointments-pages-container button:hover {
+    background-color: #27ae60;  /* Darker green on hover */
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(46, 204, 113, 0.2);
+}
+
+.appointments-pages-container button:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 6px rgba(46, 204, 113, 0.2);
+}
+
+/* Table Styles */
+.appointment-list {
+    margin-top: 30px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.appointment-list table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    background-color: #ffffff;
+}
+
+.appointment-list th {
+    background-color: #f8fafc;
+    color: #4a5568;
+    font-weight: 600;
+    padding: 16px;
+    text-align: left;
+    border-bottom: 2px solid #e2e8f0;
+    font-size: 14px;
+}
+
+.appointment-list td {
+    padding: 16px;
+    border-bottom: 1px solid #e2e8f0;
+    color: #2d3748;
+    font-size: 14px;
+}
+
+.appointment-list tr:hover {
+    background-color: #f8fafc;
+}
+
+/* Status Styles */
+.appointment-status {
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 500;
+    display: inline-block;
+}
+
+.status-scheduled {
+    background-color: #ebf8ff;
+    color: #2b6cb0;
+}
+
+/* Delete Button */
+.appointment-list button {
+    background-color: #fff;
+    color: #e53e3e;
+    border: 1px solid #e53e3e;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.appointment-list button:hover {
+    background-color: #e53e3e;
+    color: #fff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .appointment-form div {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .appointment-form label {
+        margin-bottom: 8px;
+    }
+
+    .appointment-form select,
+    .appointment-form input {
+        width: 100%;
+    }
+
+    .appointment-list {
+        overflow-x: auto;
+    }
+
+    /* Update the table action buttons to keep them distinct */
+    .appointment-list .action-buttons button {
+        width: auto;  /* Override fixed width for table buttons */
+        text-transform: none;  /* Override uppercase */
+        margin-top: 0;  /* Remove top margin */
+    }
+
+    .appointment-list .update-btn {
+        background-color: #3498db;  /* Keep update button blue */
+    }
+
+    .appointment-list .update-btn:hover {
+        background-color: #2980b9;
+    }
+}
+
+/* Action Buttons in table */
+.appointment-list .action-buttons {
+    display: flex;
+    gap: 8px;
+}
+
+.appointment-list .update-btn {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.appointment-list .update-btn:hover {
+    background-color: #2980b9;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.action-buttons button {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 50px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.update-btn {
+    background: linear-gradient(135deg, #003087 0%, #002366 100%);
+    color: white;
+}
+
+.update-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 48, 135, 0.4);
+}
+
+.delete-btn {
+    background: #dc2626;
+    color: white;
+}
+
+.delete-btn:hover {
+    background: #b91c1c;
+}
+
+.view-btn {
+    background: #e5e7eb;
+    color: #374151;
+}
+
+.view-btn:hover {
+    background: #d1d5db;
+}
+
+/* Table Styles */
+.dashboard-table td {
+  color: #1a1a1a; /* Dark text color for better visibility */
+}
+
+.text-dark {
+  color: #1a1a1a !important;
+}
+
+.text-muted {
+  color: #6b7280 !important;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* Action Buttons */
+.action-buttons {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.btn-sm {
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+}
+
+.btn-danger {
+  background: #dc2626;
+  color: white;
+}
+
+.btn-danger:hover {
+  background: #b91c1c;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(220, 38, 38, 0.4);
+}
+
+/* Status Badges */
+.status-badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 50px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+.status-scheduled {
+  background: rgba(0, 48, 135, 0.1);
+  color: #003087;
+}
+
+.py-4 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+/* Add spacing after the table */
+.mt-4 {
+  margin-top: 1.5rem;
+}
+
+    
+

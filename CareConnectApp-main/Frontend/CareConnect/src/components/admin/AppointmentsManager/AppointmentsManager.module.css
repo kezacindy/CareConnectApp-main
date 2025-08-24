@@ -1,0 +1,247 @@
+.appointmentsManager {
+  padding: 2rem;
+  background-color: #f8fafc;
+}
+
+.header {
+  margin-bottom: 2rem;
+}
+
+.title {
+  font-size: 1.875rem;
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  gap: 1rem;
+}
+
+.searchBar {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  flex: 1;
+  max-width: 400px;
+}
+
+.searchIcon {
+  color: #64748b;
+  margin-right: 0.75rem;
+}
+
+.searchBar input {
+  border: none;
+  outline: none;
+  width: 100%;
+  font-size: 0.875rem;
+  color: #1e293b;
+}
+
+.filterGroup {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: white;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+}
+
+.filterIcon {
+  color: #64748b;
+}
+
+.filterSelect {
+  border: none;
+  outline: none;
+  color: #1e293b;
+  font-size: 0.875rem;
+  background: transparent;
+  cursor: pointer;
+}
+
+.tableContainer {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.appointmentsTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.appointmentsTable th {
+  background-color: #f8fafc;
+  padding: 1rem;
+  text-align: left;
+  font-weight: 600;
+  color: #64748b;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.appointmentsTable td {
+  padding: 1rem;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.dateTimeCell {
+  white-space: nowrap;
+}
+
+.date {
+  font-weight: 500;
+  color: #1e293b;
+}
+
+.time {
+  color: #64748b;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}
+
+.doctorCell,
+.patientCell {
+  min-width: 200px;
+}
+
+.name {
+  font-weight: 500;
+  color: #1e293b;
+}
+
+.specialization,
+.email {
+  color: #64748b;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}
+
+.status {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.375rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.statusScheduled {
+  background-color: #eff6ff;
+  color: #3b82f6;
+}
+
+.statusCompleted {
+  background-color: #f0fdf4;
+  color: #10b981;
+}
+
+.statusCancelled {
+  background-color: #fef2f2;
+  color: #ef4444;
+}
+
+.statusPending {
+  background-color: #fef3c7;
+  color: #d97706;
+}
+
+.actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.actionButton {
+  padding: 0.5rem;
+  border: none;
+  border-radius: 6px;
+  background: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.viewButton {
+  color: #3b82f6;
+}
+
+.editButton {
+  color: #10b981;
+}
+
+.cancelButton {
+  color: #ef4444;
+}
+
+.actionButton:hover {
+  background-color: #f1f5f9;
+}
+
+.loadingState,
+.errorState {
+  text-align: center;
+  padding: 3rem;
+  color: #64748b;
+}
+
+.loadingSpinner {
+  border: 3px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 3px solid #3b82f6;
+  width: 40px;
+  height: 40px;
+  margin: 0 auto 1rem;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.retryButton {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.retryButton:hover {
+  background-color: #2563eb;
+}
+
+@media (max-width: 1024px) {
+  .controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .searchBar {
+    max-width: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .appointmentsManager {
+    padding: 1rem;
+  }
+
+  .tableContainer {
+    overflow-x: auto;
+  }
+} 
