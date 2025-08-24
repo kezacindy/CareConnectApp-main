@@ -70,7 +70,7 @@ CareConnect is a healthcare application designed to facilitate the management of
      ```
 
 3. **Frontend Setup**:
-   - Navigate to the `Frontend/TelemedApp` directory.
+   - Navigate to the `Frontend/CareConnectApp` directory.
    - Install the dependencies:
      ```bash
      npm install
@@ -92,7 +92,7 @@ We welcome contributions to TeleMed! Here's how you can help:
 2. **Clone your Fork**
    ```bash
    # Replace 'YOUR_USERNAME' with your actual GitHub username
-   git clone https://github.com/YOUR_USERNAME/TeleMed.git
+   git clone https://github.com/YOUR_USERNAME/CareConnect.git
    cd TeleMed
    ```
 
