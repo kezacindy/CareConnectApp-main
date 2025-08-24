@@ -1,4 +1,4 @@
-# TeleMed - Virtual Healthcare Solutions
+# CareConnect - Virtual Healthcare Solutions
 
 ## Development Status
 ⚠️ **IMPORTANT NOTICE**: This project is currently under active development and is not yet deployed for production use. Features and implementations are subject to change. The current version is a development preview.
@@ -14,7 +14,7 @@
 - 🚧 Deployment preparation
 
 ## Project Overview
-TeleMed is a healthcare application designed to facilitate the management of patient appointments, medical records, and test results. The application allows users to book appointments with doctors, view their medical records, and check their test results. The system is built to enhance the efficiency of healthcare delivery and improve patient experience.
+CareConnect is a healthcare application designed to facilitate the management of patient appointments, medical records, and test results. The application allows users to book appointments with doctors, view their medical records, and check their test results. The system is built to enhance the efficiency of healthcare delivery and improve patient experience.
 
 ## Tech Stack
 
@@ -44,13 +44,6 @@ TeleMed is a healthcare application designed to facilitate the management of pat
 - **Doctor Dashboard**: Doctors can view their scheduled appointments and manage patient records.
 - **Pagination**: Implemented in the frontend to help display data in tables efficiently.
 
-## Images
-Here are some images related to the project:
-
-![Home Page](./images/1.jpg)
-![Our Impact](./images/2.jpg)
-![Login Page](./images/3.jpg)
-![Sign Up Page](./images/4.jpg)
 
 ## Getting Started
 
@@ -86,10 +79,6 @@ Here are some images related to the project:
      ```bash
      npm run dev
      ```
-
-## Contributors
-- [Ishimwe Jean Luc](https://github.com/ishimwejeanluc) - Backend Developer
-- [Keza Marie Variante](https://github.com/kezavariante) - Frontend Developer
 
 
 ## Contributing
@@ -155,9 +144,7 @@ We welcome contributions to TeleMed! Here's how you can help:
 
    ```
 
-## License
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## Conclusion
-TeleMed aims to streamline healthcare processes by providing a user-friendly interface for managing appointments and medical records. The application is designed to enhance patient engagement and improve the overall healthcare experience.
+CareConnect aims to streamline healthcare processes by providing a user-friendly interface for managing appointments and medical records. The application is designed to enhance patient engagement and improve the overall healthcare experience.
 
